@@ -1,7 +1,11 @@
 module.exports = {
   content: ["./pages/**/*.{js,jsx}", "./components/**/*.{js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["Nunito", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
