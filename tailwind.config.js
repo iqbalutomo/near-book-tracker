@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
+        secular: ["Secular One", "sans-serif"],
       },
     },
   },
