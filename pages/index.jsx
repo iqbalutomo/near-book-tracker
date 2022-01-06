@@ -1,7 +1,12 @@
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from '../components/Modal';
 import Nav from '../components/Nav';
+import useStore from '../lib/store';
 
 export default function Home() {
+  const state = useStore();
+
   return (
     <>
       <Nav />
@@ -24,13 +29,39 @@ export default function Home() {
       <div>
         <h1 className="text-xl my-5">Popular</h1>
         <div className="flex gap-4 overflow-x-auto">
-          <img className="rounded-md" src="/cover.jpeg" width={150} />
-          <img className="rounded-md" src="/cover.jpeg" width={150} />
-          <img className="rounded-md" src="/cover.jpeg" width={150} />
-          <img className="rounded-md" src="/cover.jpeg" width={150} />
-          <img className="rounded-md" src="/cover.jpeg" width={150} />
+          <img
+            onClick={() => state.setModal(true)}
+            className="rounded-md"
+            src="/cover.jpeg"
+            width={150}
+          />
+          <img
+            onClick={() => state.setModal(true)}
+            className="rounded-md"
+            src="/cover.jpeg"
+            width={150}
+          />
+          <img
+            onClick={() => state.setModal(true)}
+            className="rounded-md"
+            src="/cover.jpeg"
+            width={150}
+          />
+          <img
+            onClick={() => state.setModal(true)}
+            className="rounded-md"
+            src="/cover.jpeg"
+            width={150}
+          />
+          <img
+            onClick={() => state.setModal(true)}
+            className="rounded-md"
+            src="/cover.jpeg"
+            width={150}
+          />
         </div>
       </div>
+      {state.modal && <Modal />}
     </>
   );
 }
