@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import Link from 'next/link';
+import React, { useState } from 'react';
 
 export default function Nav() {
   const [isModal, setIsModal] = useState(false);
@@ -49,11 +50,13 @@ export default function Nav() {
           </svg>
           <div className="text-center">
             <h1 className="text-4xl font-secular font-bold mt-20 mb-10">
-              NearBook.
+              <Link href="/">NearBook.</Link>
             </h1>
             <ul className="text-2xl font-nunito font-semibold">
               <li>Library</li>
-              <li className="my-8">Explore</li>
+              <li className="my-8">
+                <Link href="/explore">Explore</Link>
+              </li>
               <li>Profile</li>
             </ul>
           </div>
