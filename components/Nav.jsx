@@ -59,7 +59,9 @@ export default function Nav() {
               <li className="my-8">
                 <Link href="/explore">Explore</Link>
               </li>
-              <li>Profile</li>
+              <li>
+                <Link href="/profile">Profile</Link>
+              </li>
             </ul>
           </div>
         </div>

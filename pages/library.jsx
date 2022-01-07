@@ -11,7 +11,7 @@ export default function library() {
       <Nav />
       <div className="flex justify-between items-center">
         <h1 className="text-2xl">Library Page</h1>
-        <select className="py-1 px-2 rounded-md bg-[#16ADAD] text-white">
+        <select className="py-1 px-2 rounded-md bg-pink-400 text-white">
           <option defaultValue value="all">
             All
           </option>
