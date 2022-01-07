@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import Modal from '../components/Modal';
 import Nav from '../components/Nav';
 import useStore from '../lib/store';
@@ -23,11 +22,13 @@ export default function Home() {
             height={200}
           />
         </div>
-        <Link href="/explore">
-          <button className="py-2 px-4 text-white bg-black rounded-md">
-            Explore
-          </button>
-        </Link>
+        <div className="flex">
+          <Link href="/explore">
+            <button className="py-2 px-4 text-white bg-black rounded-md">
+              Explore
+            </button>
+          </Link>
+        </div>
       </div>
       <div>
         <h1 className="text-xl my-5">Popular</h1>

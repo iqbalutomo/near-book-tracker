@@ -24,7 +24,9 @@ export default function Nav() {
                 d="M4 8h16M4 16h16"
               ></path>
             </svg>
-            <h1 className="text-2xl font-secular">NearBook.</h1>
+            <Link href="/">
+              <h1 className="text-2xl font-secular">NearBook.</h1>
+            </Link>
           </div>
           <button className="font-bold py-2 px-4 bg-[#16ADAD] text-white rounded-md">
             login
