@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from '../components/Modal';
 import Nav from '../components/Nav';
+import NoBookFound from '../components/NoBookFound';
 import useStore from '../lib/store';
 
 export default function profile() {
@@ -78,16 +79,7 @@ export default function profile() {
             />
           </div>
         )}
-        {activeTab === 'readingNow' && (
-          <div className="flex flex-col text-center my-10">
-            <img
-              className="mx-auto"
-              src="/assets/icons/Nomads Sitting on Floor.png"
-              width={200}
-            />
-            <h4 className="font-thin mt-5">Let's read a book</h4>
-          </div>
-        )}
+        {activeTab === 'readingNow' && <NoBookFound />}
         {activeTab === 'finished' && (
           <div>
             <img
