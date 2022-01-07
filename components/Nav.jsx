@@ -53,7 +53,9 @@ export default function Nav() {
               <Link href="/">NearBook.</Link>
             </h1>
             <ul className="text-2xl font-nunito font-semibold">
-              <li>Library</li>
+              <li>
+                <Link href="/library">Library</Link>
+              </li>
               <li className="my-8">
                 <Link href="/explore">Explore</Link>
               </li>
