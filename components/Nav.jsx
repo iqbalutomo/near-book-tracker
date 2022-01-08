@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 
 export default function Nav() {
   const [isModal, setIsModal] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+  const [modalProfile, setModalProfile] = useState(false);
+  const [modalEditProfile, setModalEditProfile] = useState(false);
 
   return (
     <div>
@@ -28,9 +31,50 @@ export default function Nav() {
               <h1 className="text-2xl font-secular">NearBook.</h1>
             </Link>
           </div>
-          <button className="font-bold py-2 px-4 bg-[#16ADAD] text-white rounded-md">
-            login
-          </button>
+          {!isLogin ? (
+            <button className="font-bold py-2 px-4 bg-[#16ADAD] text-white rounded-md">
+              login
+            </button>
+          ) : (
+            <div>
+              <button
+                onClick={() => setModalProfile(true)}
+                className="flex justify-between gap-4 items-center font-bold py-2 px-2 bg-[#16ADAD] text-white rounded-md"
+              >
+                <div className="flex">
+                  <img src="/assets/icons/Nomads Avatar.png" width={30} />
+                  <p className="font-thin">John Doe</p>
+                </div>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </button>
+              {modalProfile && (
+                <>
+                  <div
+                    onClick={() => setModalProfile(false)}
+                    className="absolute inset-0"
+                  ></div>
+                  <div className="absolute z-10 mt-2 py-2 px-3 pr-14 font-thin text-white bg-[#16ADAD] rounded-md">
+                    <button className="my-2">Edit Profile</button>
+                    <br />
+                    <button className="mb-2">Logout</button>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
         </div>
       </div>
       {isModal && (
