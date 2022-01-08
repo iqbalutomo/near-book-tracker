@@ -70,18 +70,17 @@ export default function Nav() {
                     onClick={() => setModalProfile(false)}
                     className="absolute inset-0"
                   ></div>
-                  <div className="absolute z-10 mt-2 py-2 px-3 pr-14 font-thin text-white bg-[#16ADAD] rounded-md">
-                    <button
+                  <div className="absolute z-10 mt-2 py-2 font-thin text-white bg-[#16ADAD] rounded-md">
+                    <div
                       onClick={() => {
                         setModalEditProfile(true);
                         setModalProfile(false);
                       }}
-                      className="my-2"
+                      className="whitespace-nowrap pr-16 py-2 pl-2"
                     >
                       Edit Profile
-                    </button>
-                    <br />
-                    <button className="mb-2">Logout</button>
+                    </div>
+                    <div className="pr-20 py-2 pl-2">Logout</div>
                   </div>
                 </>
               )}
